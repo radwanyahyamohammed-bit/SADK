@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SADK Certificates - STEM Asyut Deutsch Klub</title>
+    <meta name="description" content="Recognizing the dedication and contributions of the STEM Asyut Deutsch Klub team for the 2025-2026 season.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../images/Logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* ============================================
+           Certificates Page — Custom Styles
+           ============================================ */
+
+        /* ---------- Appreciation Essay ---------- */
+        .appreciation-section {
+            padding: 4rem 0 2rem;
+            position: relative;
+        }
+
+        .appreciation-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2.5rem 3rem;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+            border-left: 6px solid var(--color-gold);
+            position: relative;
+            backdrop-filter: blur(4px);
+        }
+
+        .appreciation-inner::before {
+            content: '\201C';
+            font-size: 7rem;
+            color: var(--color-gold);
+            opacity: 0.18;
+            position: absolute;
+            top: -10px;
+            left: 18px;
+            line-height: 1;
+            font-family: Georgia, serif;
+        }
+
+        .appreciation-inner p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #222;
+            font-style: italic;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        .appreciation-inner .german-sign {
+            display: block;
+            margin-top: 1.2rem;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            color: var(--color-red);
+            letter-spacing: 0.04em;
+        }
+
+        /* ---------- Section Headers ---------- */
+        .cert-section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--color-black);
+            margin-bottom: 0.4rem;
+            text-shadow: 1px 1px 3px rgba(255,255,255,0.9);
+        }
+
+        .cert-section-sub {
+            text-align: center;
+            color: var(--color-gray);
+            font-size: 1rem;
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+        }
+
+        /* ---------- Leaders Section ---------- */
+        .leaders-cert-section {
+            padding: 4rem 0 2rem;
+        }
+
+        .leaders-cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .leader-cert-card {
+            background: linear-gradient(160deg, #1a1a1a 0%, #2d2d2d 60%, #1a1a1a 100%);
+            border-radius: 22px;
+            padding: 2.5rem 2rem 2rem;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.28), 0 0 0 2px var(--color-gold);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .leader-cert-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,204,0,0.07) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .leader-cert-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.38), 0 0 0 3px var(--color-gold);
+        }
+
+        .leader-crown {
+            position: absolute;
+            top: 1.1rem;
+            right: 1.4rem;
+            color: var(--color-gold);
+            font-size: 1.4rem;
+            opacity: 0.8;
+        }
+
+        .leader-photo-wrap {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .leader-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--color-gold);
+            box-shadow: 0 6px 20px rgba(255,204,0,0.35);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .leader-cert-card:hover .leader-photo {
+            transform: scale(1.07);
+            box-shadow: 0 10px 30px rgba(255,204,0,0.5);
+        }
+
+        .leader-cert-name {
+            text-align: center;
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--color-gold);
+            margin-bottom: 0.2rem;
+        }
+
+        .leader-cert-role {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #ccc;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-embed-wrap {
+            width: 100%;
+            background: #111;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            /* A4 aspect ratio: 1:1.4142 */
+            aspect-ratio: 1 / 1.4142;
+            border: 2px solid rgba(255,204,0,0.3);
+            margin-bottom: 1.2rem;
+        }
+
+        .cert-embed-wrap iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        .cert-open-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.65rem 1rem;
+            background: transparent;
+            border: 2px solid var(--color-gold);
+            border-radius: 30px;
+            color: var(--color-gold);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.04em;
+            transition: all 0.3s ease;
+            margin-bottom: 1.2rem;
+        }
+
+        .cert-open-btn:hover {
+            background: var(--color-gold);
+            color: #000;
+        }
+
+        .leader-thank-you {
+            font-size: 0.9rem;
+            color: #bbb;
+            text-align: center;
+            line-height: 1.6;
+            font-style: italic;
+            border-top: 1px solid rgba(255,204,0,0.2);
+            padding-top: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        /* ---------- Committee Sections ---------- */
+        .committee-cert-section {
+            padding: 3rem 0;
+        }
+
+        .committee-cert-block {
+            max-width: 1200px;
+            margin: 0 auto 4rem;
+            padding: 0 20px;
+        }
+
+        .committee-cert-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--color-red);
+        }
+
+        .committee-cert-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .committee-cert-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--color-black);
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.9);
+        }
+
+        .committee-cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* ---------- Member Cards ---------- */
+        .member-cert-card {
+            background: rgba(255,255,255,0.93);
+            border-radius: 16px;
+            padding: 1.8rem 1.5rem 1.5rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-top: 4px solid var(--color-gray-shadow);
+            backdrop-filter: blur(4px);
+        }
+
+        .member-cert-card.role-head {
+            border-top-color: var(--color-gold);
+        }
+
+        .member-cert-card.role-vice {
+            border-top-color: #aaa;
+        }
+
+        .member-cert-card.role-coordinator {
+            border-top-color: var(--color-red);
+        }
+
+        .member-cert-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+        }
+
+        .role-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .role-badge.head {
+            background: rgba(255,204,0,0.15);
+            color: #a07800;
+            border: 1px solid var(--color-gold);
+        }
+
+        .role-badge.vice {
+            background: rgba(160,160,160,0.15);
+            color: #555;
+            border: 1px solid #bbb;
+        }
+
+        .role-badge.member {
+            background: rgba(0,0,0,0.06);
+            color: #444;
+            border: 1px solid #ccc;
+        }
+
+        .role-badge.coordinator {
+            background: rgba(222,0,0,0.10);
+            color: var(--color-dark-red);
+            border: 1px solid var(--color-red);
+        }
+
+        .member-photo-wrap {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.9rem;
+        }
+
+        .member-photo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--color-light-beige);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease;
+        }
+
+        .member-cert-card:hover .member-photo {
+            transform: scale(1.08);
+        }
+
+        .member-cert-card.role-head .member-photo {
+            border-color: var(--color-gold);
+        }
+
+        .member-initials {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .member-cert-name {
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 0.15rem;
+        }
+
+        .member-cert-role-txt {
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--color-gray);
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .member-cert-embed {
+            width: 100%;
+            aspect-ratio: 1 / 1.4142;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            background: #f8f8f8;
+            margin-bottom: 0.8rem;
+        }
+
+        .member-cert-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .member-open-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            width: 100%;
+            padding: 0.55rem 1rem;
+            background: transparent;
+            border: 2px solid var(--color-red);
+            border-radius: 30px;
+            color: var(--color-red);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.78rem;
+            letter-spacing: 0.04em;
+            transition: all 0.3s ease;
+            margin-bottom: 0.9rem;
+        }
+
+        .member-open-btn:hover {
+            background: var(--color-red);
+            color: #fff;
+        }
+
+        .member-cert-card.role-head .member-open-btn {
+            border-color: var(--color-dark-gold);
+            color: var(--color-dark-gold);
+        }
+
+        .member-cert-card.role-head .member-open-btn:hover {
+            background: var(--color-dark-gold);
+            color: #000;
+        }
+
+        .member-thank-you {
+            font-size: 0.8rem;
+            color: #555;
+            text-align: center;
+            line-height: 1.55;
+            font-style: italic;
+            border-top: 1px solid #eee;
+            padding-top: 0.8rem;
+        }
+
+        /* ---------- Scroll-triggered Animations ---------- */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ---------- Quote Block ---------- */
+        .cert-quote-block {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            padding: 1.5rem 2.5rem;
+            background: rgba(0,0,0,0.85);
+            border-radius: 14px;
+            border-left: 5px solid var(--color-gold);
+            text-align: center;
+        }
+
+        .cert-quote-block p {
+            color: #e0e0e0;
+            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        .cert-quote-block .german {
+            color: var(--color-gold);
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        /* ---------- Container override for sections ---------- */
+        .cert-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 768px) {
+            .leaders-cert-grid {
+                grid-template-columns: 1fr;
+                max-width: 420px;
+            }
+
+            .committee-cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .appreciation-inner {
+                padding: 2rem 1.5rem;
+            }
+
+            .cert-section-title { font-size: 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .committee-cert-name { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../images/Logo.png" alt="Deutsch Klub Logo" class="logo-img">
+                <span class="logo-text">STEM Asyut Deutsch Klub</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">Learn German ▼</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="Materials.html" class="dropdown-toggle-sub">Materials</a></li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-toggle-sub">G10 ▼</a>
+                            <ul class="dropdown-submenu">
+                                <li class="dropdown-item"><a href="curriculum/g10/semester1/lektionen.html">Semester 1</a></li>
+                                <li class="dropdown-item"><a href="curriculum/g10/semester2/lektionen.html">Semester 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-item">
+                            <a href="#" class="dropdown-toggle-sub">G11 ▼</a>
+                            <ul class="dropdown-submenu">
+                                <li class="dropdown-item"><a href="curriculum/g11/semester1/lektionen.html">Semester 1</a></li>
+                                <li class="dropdown-item"><a href="curriculum/g11/semester2/lektionen.html">Semester 2</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+                <li class="nav-item"><a href="test-banks.html" class="nav-link">Quizzes</a></li>
+                <li class="nav-item"><a href="certificates.html" class="nav-link active">Certificates</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="../images/club.jpeg" alt="SADK Club" class="bg-image">
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content" style="padding: 10px;">
+            <h1 class="hero-title" style="font-size: 40px;">SADK Certificates</h1>
+            <p class="hero-subtitle">Recognizing the Dedication of Our Team</p>
+        </div>
+    </section>
+
+    <!-- ============ APPRECIATION ESSAY ============ -->
+    <section class="appreciation-section fade-in-up">
+        <div class="cert-container">
+            <div class="appreciation-inner">
+                <p>
+                    To the incredible team behind STEM Asyut Deutsch Klub — this season, you gave your time, your effort, and your passion to build something truly special. You created a community where learning German became accessible, engaging, and genuinely enjoyable for everyone. Every event you organized, every lesson you prepared, and every moment you spent supporting our members made a real difference. This club is stronger, brighter, and more vibrant because of each and every one of you. From the bottom of our hearts: thank you for your dedication, your creativity, and your unwavering commitment. You didn't just build a club — you built a family.
+                    <span class="german-sign">Gemeinsam Deutsch lernen und gemeinsam wachsen.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ LEADERS SECTION ============ -->
+    <section class="leaders-cert-section">
+        <div class="cert-container">
+            <h2 class="cert-section-title fade-in-up">Club Leadership</h2>
+            <p class="cert-section-sub fade-in-up">The vision-setters of the 2025–2026 season</p>
+
+            <div class="leaders-cert-grid">
+
+                <!-- Radwan Yahya — Leader -->
+                <div class="leader-cert-card fade-in-up">
+                    <i class="fas fa-crown leader-crown"></i>
+                    <div class="leader-photo-wrap">
+                        <img src="../images/team/Radwan.jpeg" alt="Radwan Yahya" class="leader-photo">
+                    </div>
+                    <h3 class="leader-cert-name">Radwan Yahya</h3>
+                    <p class="leader-cert-role"><i class="fas fa-star" style="color:var(--color-gold);font-size:0.7rem;"></i>&nbsp;Leader&nbsp;<i class="fas fa-star" style="color:var(--color-gold);font-size:0.7rem;"></i></p>
+
+                    <div class="cert-embed-wrap">
+                        <iframe
+                            src="../SADK Certificate/Radwan Yahya.pdf"
+                            title="Certificate – Radwan Yahya"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <a href="../SADK Certificate/Radwan Yahya.pdf" target="_blank" class="cert-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Full Certificate
+                    </a>
+                    <p class="leader-thank-you">
+                        Radwan, your vision shaped every corner of this club. You led with clarity, passion, and genuine care for every single member of the team. Thank you for being the heart of SADK this season — your leadership made all the difference.
+                    </p>
+                </div>
+
+                <!-- Miry Girgis — Co-Leader -->
+                <div class="leader-cert-card fade-in-up">
+                    <i class="fas fa-crown leader-crown"></i>
+                    <div class="leader-photo-wrap">
+                        <img src="../images/team/Co-Leader.jpeg" alt="Miry Girgis" class="leader-photo">
+                    </div>
+                    <h3 class="leader-cert-name">Miry Girgis</h3>
+                    <p class="leader-cert-role"><i class="fas fa-star" style="color:var(--color-gold);font-size:0.7rem;"></i>&nbsp;Co-Leader&nbsp;<i class="fas fa-star" style="color:var(--color-gold);font-size:0.7rem;"></i></p>
+
+                    <div class="cert-embed-wrap">
+                        <iframe
+                            src="../SADK Certificate/Miry Girgis.pdf"
+                            title="Certificate – Miry Girgis"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <a href="../SADK Certificate/Miry Girgis.pdf" target="_blank" class="cert-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Full Certificate
+                    </a>
+                    <p class="leader-thank-you">
+                        Miry, your dedication to keeping the team connected and motivated was felt every single day. Thank you for stepping up time and again — the club thrived this season because of your unwavering support and energy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ COMMITTEE SECTIONS ============ -->
+    <section class="committee-cert-section">
+        <div class="cert-container">
+            <h2 class="cert-section-title fade-in-up">Our Committees</h2>
+            <p class="cert-section-sub fade-in-up">Every committee played a vital role in building this season's success</p>
+        </div>
+
+        <!-- ── GRAPHIC DESIGN ── -->
+        <div class="committee-cert-block fade-in-up">
+            <div class="committee-cert-header">
+                <div class="committee-cert-icon" style="background: linear-gradient(135deg,#e91e8c,#c2185b);">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3 class="committee-cert-name">Graphic Design Committee</h3>
+            </div>
+            <div class="committee-cert-grid">
+
+                <!-- Renad Sameh – Head -->
+                <div class="member-cert-card role-head fade-in-up">
+                    <span class="role-badge head">Head</span>
+                    <div class="member-photo-wrap">
+                        <img src="../images/team/GD.jpeg" alt="Renad Sameh" class="member-photo">
+                    </div>
+                    <p class="member-cert-name">Renad Sameh</p>
+                    <p class="member-cert-role-txt">Head – Graphic Design</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Renad Sameh.pdf" title="Certificate – Renad Sameh" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Renad Sameh.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Renad, your creative eye gave this club its visual identity. Thank you for every design that made SADK shine.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── MARKETING ── -->
+        <div class="committee-cert-block fade-in-up">
+            <div class="committee-cert-header">
+                <div class="committee-cert-icon" style="background: linear-gradient(135deg,#8b5cf6,#7c3aed);">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="committee-cert-name">Marketing Committee</h3>
+            </div>
+            <div class="committee-cert-grid">
+
+                <!-- Mohamed Shawky – Head -->
+                <div class="member-cert-card role-head fade-in-up">
+                    <span class="role-badge head">Head</span>
+                    <div class="member-photo-wrap">
+                        <img src="../images/team/marketing.jpeg" alt="Mohamed Shawky" class="member-photo">
+                    </div>
+                    <p class="member-cert-name">Mohamed Shawky</p>
+                    <p class="member-cert-role-txt">Head – Marketing</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Mohamed Shawky.pdf" title="Certificate – Mohamed Shawky" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Mohamed Shawky.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Mohamed, your marketing instincts helped our message reach every corner of the school. Thank you for amplifying SADK's voice.</p>
+                </div>
+
+                <!-- Habiba Ahmed – Vice-Head -->
+                <div class="member-cert-card role-vice fade-in-up">
+                    <span class="role-badge vice">Vice-Head</span>
+                    <div class="member-photo-wrap">
+                        <img src="../images/team/M-vice.jpeg" alt="Habiba Ahmed" class="member-photo">
+                    </div>
+                    <p class="member-cert-name">Habiba Ahmed</p>
+                    <p class="member-cert-role-txt">Vice-Head – Marketing</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Habiba Ahmed.pdf" title="Certificate – Habiba Ahmed" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Habiba Ahmed.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Habiba, your consistent effort kept the marketing machine running smoothly. Thank you for your reliability and creativity.</p>
+                </div>
+
+                <!-- Ahmed Mohamed Ahmed – Member (no photo) -->
+                <div class="member-cert-card fade-in-up">
+                    <span class="role-badge member">Member</span>
+                    <div class="member-photo-wrap">
+                        <div class="member-initials" style="background: linear-gradient(135deg,#8b5cf6,#7c3aed);">AMA</div>
+                    </div>
+                    <p class="member-cert-name">Ahmed Mohamed Ahmed</p>
+                    <p class="member-cert-role-txt">Member – Marketing</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Ahmed Mohamed Ahmed.pdf" title="Certificate – Ahmed Mohamed Ahmed" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Ahmed Mohamed Ahmed.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Ahmed, your contributions to the marketing team helped spread the word about everything we do. Thank you for being part of the team.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── ACADEMIC ── -->
+        <div class="committee-cert-block fade-in-up">
+            <div class="committee-cert-header">
+                <div class="committee-cert-icon" style="background: linear-gradient(135deg,#10b981,#059669);">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3 class="committee-cert-name">Academic Committee</h3>
+            </div>
+            <div class="committee-cert-grid">
+
+                <!-- Sama Samy – Head (no photo) -->
+                <div class="member-cert-card role-head fade-in-up">
+                    <span class="role-badge head">Head</span>
+                    <div class="member-photo-wrap">
+                        <div class="member-initials" style="background: linear-gradient(135deg,#10b981,#059669);">SS</div>
+                    </div>
+                    <p class="member-cert-name">Sama Samy</p>
+                    <p class="member-cert-role-txt">Head – Academic</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Sama Samy.pdf" title="Certificate – Sama Samy" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Sama Samy.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Sama, the quality of every session this season reflects your hard work and academic dedication. Thank you for raising the bar.</p>
+                </div>
+
+                <!-- Adam Mohamed – Vice-Head -->
+                <div class="member-cert-card role-vice fade-in-up">
+                    <span class="role-badge vice">Vice-Head</span>
+                    <div class="member-photo-wrap">
+                        <img src="../images/team/academic-vice.jpeg" alt="Adam Mohamed" class="member-photo">
+                    </div>
+                    <p class="member-cert-name">Adam Mohamed</p>
+                    <p class="member-cert-role-txt">Vice-Head – Academic</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Adam Mohamed (1).pdf" title="Certificate – Adam Mohamed" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Adam Mohamed (1).pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Adam, your support of the academic committee ensured every student got the guidance they needed. Thank you for your commitment.</p>
+                </div>
+
+                <!-- Moaaz Ahmed – Member (no photo) -->
+                <div class="member-cert-card fade-in-up">
+                    <span class="role-badge member">Member</span>
+                    <div class="member-photo-wrap">
+                        <div class="member-initials" style="background: linear-gradient(135deg,#10b981,#059669);">MA</div>
+                    </div>
+                    <p class="member-cert-name">Moaaz Ahmed</p>
+                    <p class="member-cert-role-txt">Member – Academic</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Moaaz Ahmed (1).pdf" title="Certificate – Moaaz Ahmed" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Moaaz Ahmed (1).pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Moaaz, your dedication to helping students understand the material made a real difference. Thank you for your patience and effort.</p>
+                </div>
+
+                <!-- Joy Saleh – Member (no photo) -->
+                <div class="member-cert-card fade-in-up">
+                    <span class="role-badge member">Member</span>
+                    <div class="member-photo-wrap">
+                        <div class="member-initials" style="background: linear-gradient(135deg,#10b981,#059669);">JS</div>
+                    </div>
+                    <p class="member-cert-name">Joy Saleh</p>
+                    <p class="member-cert-role-txt">Member – Academic</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Joy Saleh.pdf" title="Certificate – Joy Saleh" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Joy Saleh.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Joy, your positive energy and hard work enriched the academic experience for everyone. Thank you for every contribution.</p>
+                </div>
+
+                <!-- Maria Asaad – Member (no photo) -->
+                <div class="member-cert-card fade-in-up">
+                    <span class="role-badge member">Member</span>
+                    <div class="member-photo-wrap">
+                        <div class="member-initials" style="background: linear-gradient(135deg,#10b981,#059669);">MA</div>
+                    </div>
+                    <p class="member-cert-name">Maria Asaad</p>
+                    <p class="member-cert-role-txt">Member – Academic</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Maria Asaad.pdf" title="Certificate – Maria Asaad" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Maria Asaad.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Maria, your thoroughness and care in every task helped the committee deliver excellent content. Thank you for your dedication.</p>
+                </div>
+
+                <!-- Marly Albear – Member (no photo) -->
+                <div class="member-cert-card fade-in-up">
+                    <span class="role-badge member">Member</span>
+                    <div class="member-photo-wrap">
+                        <div class="member-initials" style="background: linear-gradient(135deg,#10b981,#059669);">MA</div>
+                    </div>
+                    <p class="member-cert-name">Marly Albear</p>
+                    <p class="member-cert-role-txt">Member – Academic</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Marly Albear.pdf" title="Certificate – Marly Albear" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Marly Albear.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Marly, your reliability and enthusiasm made you an invaluable part of the academic team. Thank you for showing up every time.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── CONTENT WRITING ── -->
+        <div class="committee-cert-block fade-in-up">
+            <div class="committee-cert-header">
+                <div class="committee-cert-icon" style="background: linear-gradient(135deg,#1347f0,#2e77f6);">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3 class="committee-cert-name">Content Writing Committee</h3>
+            </div>
+            <div class="committee-cert-grid">
+
+                <!-- Mohamed Khaled – Head -->
+                <div class="member-cert-card role-head fade-in-up">
+                    <span class="role-badge head">Head</span>
+                    <div class="member-photo-wrap">
+                        <img src="../images/team/CW.jpeg" alt="Mohamed Khaled" class="member-photo">
+                    </div>
+                    <p class="member-cert-name">Mohamed Khaled</p>
+                    <p class="member-cert-role-txt">Head – Content Writing</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Mohamed Khaled.pdf" title="Certificate – Mohamed Khaled" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Mohamed Khaled.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Mohamed, your words gave the club its voice. Every caption, post, and announcement carried the quality and heart you brought to this role. Thank you.</p>
+                </div>
+
+                <!-- Salsabil Mohamed – Vice-Head -->
+                <div class="member-cert-card role-vice fade-in-up">
+                    <span class="role-badge vice">Vice-Head</span>
+                    <div class="member-photo-wrap">
+                        <img src="../images/team/CW-vice.jpeg" alt="Salsabil Mohamed" class="member-photo">
+                    </div>
+                    <p class="member-cert-name">Salsabil Mohamed</p>
+                    <p class="member-cert-role-txt">Vice-Head – Content Writing</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Salsabil Mohamed.pdf" title="Certificate – Salsabil Mohamed" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Salsabil Mohamed.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Salsabil, your thoughtful writing and attention to detail elevated every piece of content. Thank you for your creativity and care.</p>
+                </div>
+
+                <!-- Amr Mousa – Member (no photo) -->
+                <div class="member-cert-card fade-in-up">
+                    <span class="role-badge member">Member</span>
+                    <div class="member-photo-wrap">
+                        <div class="member-initials" style="background: linear-gradient(135deg,#1347f0,#2e77f6);">AM</div>
+                    </div>
+                    <p class="member-cert-name">Amr Mousa</p>
+                    <p class="member-cert-role-txt">Member – Content Writing</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Amr Mousa.pdf" title="Certificate – Amr Mousa" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Amr Mousa.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Amr, your contributions helped the content writing committee produce work the whole club could be proud of. Thank you for your effort.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── HUMAN RESOURCES ── -->
+        <div class="committee-cert-block fade-in-up">
+            <div class="committee-cert-header">
+                <div class="committee-cert-icon" style="background: linear-gradient(135deg,#dc2424,#f35454);">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="committee-cert-name">Human Resources Committee</h3>
+            </div>
+            <div class="committee-cert-grid">
+
+                <!-- Abdelrahman Ebrahim – Coordinator (no photo) -->
+                <div class="member-cert-card role-coordinator fade-in-up">
+                    <span class="role-badge coordinator">Coordinator</span>
+                    <div class="member-photo-wrap">
+                        <div class="member-initials" style="background: linear-gradient(135deg,#dc2424,#f35454);">AE</div>
+                    </div>
+                    <p class="member-cert-name">Abdelrahman Ebrahim</p>
+                    <p class="member-cert-role-txt">Coordinator – Human Resources</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Abdelrahman Ebrahim.pdf" title="Certificate – Abdelrahman Ebrahim" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Abdelrahman Ebrahim.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Abdelrahman, your coordination role kept the HR team aligned and moving forward. Thank you for your organizational strength and dedication.</p>
+                </div>
+
+                <!-- Shenouda Atef – Head -->
+                <div class="member-cert-card role-head fade-in-up">
+                    <span class="role-badge head">Head</span>
+                    <div class="member-photo-wrap">
+                        <img src="../images/team/HR.jpeg" alt="Shenouda Atef" class="member-photo">
+                    </div>
+                    <p class="member-cert-name">Shenouda Atef</p>
+                    <p class="member-cert-role-txt">Head – Human Resources</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Shenouda Atef.pdf" title="Certificate – Shenouda Atef" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Shenouda Atef.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Shenouda, your care for the team's wellbeing and morale created an environment where everyone felt valued. Thank you for being a pillar of this club.</p>
+                </div>
+
+                <!-- Alaa Ahmed – Vice-Head -->
+                <div class="member-cert-card role-vice fade-in-up">
+                    <span class="role-badge vice">Vice-Head</span>
+                    <div class="member-photo-wrap">
+                        <img src="../images/team/HR-vice.jpeg" alt="Alaa Ahmed" class="member-photo">
+                    </div>
+                    <p class="member-cert-name">Alaa Ahmed</p>
+                    <p class="member-cert-role-txt">Vice-Head – Human Resources</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Alaa Ahmed.pdf" title="Certificate – Alaa Ahmed" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Alaa Ahmed.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Alaa, your support of both the team and the HR head made everything run more smoothly. Thank you for your warmth and consistency.</p>
+                </div>
+
+                <!-- Marina Shenouda – Member (no photo) -->
+                <div class="member-cert-card fade-in-up">
+                    <span class="role-badge member">Member</span>
+                    <div class="member-photo-wrap">
+                        <div class="member-initials" style="background: linear-gradient(135deg,#dc2424,#f35454);">MS</div>
+                    </div>
+                    <p class="member-cert-name">Marina Shenouda</p>
+                    <p class="member-cert-role-txt">Member – Human Resources</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Marina Shenouda.pdf" title="Certificate – Marina Shenouda" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Marina Shenouda.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Marina, your thoughtful work in HR helped ensure every team member felt heard and supported. Thank you for your kindness and dedication.</p>
+                </div>
+
+                <!-- Amany Mohamed – Member (no photo) -->
+                <div class="member-cert-card fade-in-up">
+                    <span class="role-badge member">Member</span>
+                    <div class="member-photo-wrap">
+                        <div class="member-initials" style="background: linear-gradient(135deg,#dc2424,#f35454);">AM</div>
+                    </div>
+                    <p class="member-cert-name">Amany Mohamed</p>
+                    <p class="member-cert-role-txt">Member – Human Resources</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Amany Mohamed.pdf" title="Certificate – Amany Mohamed" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Amany Mohamed.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Amany, your contributions helped the HR committee build the strong, positive culture that this club is known for. Thank you for your effort.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── COMPETITION ── -->
+        <div class="committee-cert-block fade-in-up">
+            <div class="committee-cert-header">
+                <div class="committee-cert-icon" style="background: linear-gradient(135deg,#f59e0b,#d97706);">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3 class="committee-cert-name">Competition Committee</h3>
+            </div>
+            <div class="committee-cert-grid">
+
+                <!-- Yazeed Ahmed – Head -->
+                <div class="member-cert-card role-head fade-in-up">
+                    <span class="role-badge head">Head</span>
+                    <div class="member-photo-wrap">
+                        <img src="../images/team/head-comp.jpeg" alt="Yazeed Ahmed" class="member-photo">
+                    </div>
+                    <p class="member-cert-name">Yazeed Ahmed</p>
+                    <p class="member-cert-role-txt">Head – Competition</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Yazeed Ahmed.pdf" title="Certificate – Yazeed Ahmed" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Yazeed Ahmed.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Yazeed, the competitions this season were memorable because of your leadership and planning. Thank you for turning ideas into unforgettable events.</p>
+                </div>
+
+                <!-- Adham Sherif – Vice-Head -->
+                <div class="member-cert-card role-vice fade-in-up">
+                    <span class="role-badge vice">Vice-Head</span>
+                    <div class="member-photo-wrap">
+                        <img src="../images/team/vice-comp.jpeg" alt="Adham Sherif" class="member-photo">
+                    </div>
+                    <p class="member-cert-name">Adham Sherif</p>
+                    <p class="member-cert-role-txt">Vice-Head – Competition</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Adham Sherif.pdf" title="Certificate – Adham Sherif" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Adham Sherif.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Adham, your enthusiasm and hands-on involvement brought the competition committee's plans to life. Thank you for all the energy you gave.</p>
+                </div>
+
+                <!-- Abdelrahman Osama – Member (no photo) -->
+                <div class="member-cert-card fade-in-up">
+                    <span class="role-badge member">Member</span>
+                    <div class="member-photo-wrap">
+                        <div class="member-initials" style="background: linear-gradient(135deg,#f59e0b,#d97706);">AO</div>
+                    </div>
+                    <p class="member-cert-name">Abdelrahman Osama</p>
+                    <p class="member-cert-role-txt">Member – Competition</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Abdelrahman Osama.pdf" title="Certificate – Abdelrahman Osama" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Abdelrahman Osama.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Abdelrahman, your involvement in the competition committee helped make every event smooth and exciting. Thank you for your reliable support.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── IT ── -->
+        <div class="committee-cert-block fade-in-up">
+            <div class="committee-cert-header">
+                <div class="committee-cert-icon" style="background: linear-gradient(135deg,#64d25d,#2da824);">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="committee-cert-name">IT Committee</h3>
+            </div>
+            <div class="committee-cert-grid">
+
+                <!-- Ahmed Mohamed Eladawy – Head -->
+                <div class="member-cert-card role-head fade-in-up">
+                    <span class="role-badge head">Head</span>
+                    <div class="member-photo-wrap">
+                        <img src="../images/team/IT.jpeg" alt="Ahmed Mohamed Eladawy" class="member-photo">
+                    </div>
+                    <p class="member-cert-name">Ahmed Mohamed Eladawy</p>
+                    <p class="member-cert-role-txt">Head – IT</p>
+                    <div class="member-cert-embed">
+                        <iframe src="../SADK Certificate/Ahmed Mohamed Eladawy.pdf" title="Certificate – Ahmed Mohamed Eladawy" loading="lazy"></iframe>
+                    </div>
+                    <a href="../SADK Certificate/Ahmed Mohamed Eladawy.pdf" target="_blank" class="member-open-btn">
+                        <i class="fas fa-external-link-alt"></i> Open Certificate
+                    </a>
+                    <p class="member-thank-you">Ahmed, the digital infrastructure and the very website you're reading right now exist because of your technical skill and dedication. Thank you for building SADK's digital home.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Closing Quote -->
+        <div class="cert-container fade-in-up" style="padding-bottom: 4rem;">
+            <div class="cert-quote-block">
+                <p>
+                    Throughout this season, you contributed your time, effort, and passion to building a community where German learning is accessible, engaging, and truly enjoyable. Your work made a difference — and this club is stronger because of you.<br><br>
+                    <span class="german">Gemeinsam Deutsch lernen und gemeinsam wachsen.</span>
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Deutsch Klub</h3>
+                    <p>Empowering students to excel in German language learning</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Team</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="test-banks.html">Quizzes</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScHW62ctySetNvA77ugYEDBZ3rTEvPl_3uHlcNOVpsYtgZROw/viewform?usp=header"
+                               target="_blank" rel="noopener noreferrer">
+                                Apply Now! — Members Form
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p class="contact-number">+201024012428</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61564110370482" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="mailto:stemasyutdeutschklub@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/company/stem-asyut-deutsch-klub/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VbBIB41ISTkC7JuaUb1q" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SADK - STEM Asyut Deutsch Klub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Scroll-triggered fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
